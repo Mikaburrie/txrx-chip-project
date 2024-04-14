@@ -1,5 +1,5 @@
 // Controls rate of transmission/reception (bits/s)
-#define RATE 500
+#define RATE 400
 
 // Controls sync pulses transmitted and how many need to be received
 #define SYNC_PULSES 20

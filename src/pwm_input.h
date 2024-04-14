@@ -1,15 +1,18 @@
 #ifndef PWM_INPUT_H
 #define PWM_INPUT_H
 
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
 #include "micros.h"
 
 /*
 PWM input using timer and interrupt.
- - uses pin interrupt vector (defult d2)
+ - uses PCINT1 interrupt vector (any adc/pinc pin)
  - callback PWM_ON_PERIOD when period is detected
 
 Usage:
- - Call initPWM() to configure timer and interrupt
+ - Call startPWM() to start and enable interrupt
  - #define PWM_ON_PERIOD(period, duty) to run code each period
     - period -> uint32_t (microseconds)
     - duty   -> uint8_t (0 is ~0%, 255 is ~100%)
@@ -18,9 +21,10 @@ Usage:
 
 uint32_t _pwm_last = 0;
 uint32_t _pwm_edge = 0;
+uint8_t _pwm_pin = 7;
 
-ISR(INT0_vect) {
-    uint8_t val = PIND & (1 << PIND2);
+ISR(PCINT1_vect) {
+    uint8_t val = PINC & (1 << _pwm_pin);
     uint32_t now = micros();
 
     if (val) {
@@ -35,12 +39,13 @@ ISR(INT0_vect) {
     }
 }
 
-void initPWM() {
-    initMicros();
+void startPWM(uint8_t adcPin) {
+    startMicros();
 
-    // enable int0 (pin2)
-    EICRA |= (1 << ISC00);
-    EIMSK |= (1 << INT0);
+    // enable adc interrupt
+    PCICR |= (1 << PCIE1);
+    PCMSK1 |= (1 << adcPin);
+    _pwm_pin = adcPin;
 }
 
 #endif

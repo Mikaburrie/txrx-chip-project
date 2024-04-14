@@ -1,5 +1,5 @@
-#ifndef RX_H
-#define RX_H
+#ifndef RX_DIGITAL_H
+#define RX_DIGITAL_H
 
 #include <avr/io.h>
 
@@ -8,18 +8,14 @@ void _rx_onPeriod(uint32_t period, uint8_t duty);
 #include "pwm_input.h"
 
 /*
-PWM based receiver for the protocol described in tx.h.
+PWM based digital receiver for the protocol described in tx.h
 
 Usage:
- - Call rxInit() to begin receiving
+ - Call rxInit(uint8_t adcPin) to begin receiving on adcPin
  - Call rxRecv(uint8_t** buffer, uint8_t* length) to get receiving state
     - Returns current state and sets buffer/length if data is available 
  - Use RX_STATE to get the state of the receiver (RX_NOISE, RX_SYNC, etc.)
- - #define RX_RATE (default 500)
- - #define RX_MAX_RATE_ERROR (default 50)
- - #define RX_BUFFER_LENGTH (default 255)
- - #define RX_SYNC_PULSES (default 10)
- - !! Disabling interrupts prevents transmission from working properly !!
+ - !! Disabling interrupts prevents reception from working properly !!
 */
 
 #ifndef RX_RATE
@@ -57,8 +53,9 @@ uint8_t _rx_bit = 0;
 uint16_t _rx_duty = 0;
 
 inline
-void rxInit() {
-    initPWM();
+void rxInit(uint8_t adcPin) {
+    // Start pwm input on adc pin 0
+    startPWM(adcPin);
 }
 
 uint8_t rxRecv(uint8_t** buffer, uint8_t* length) {

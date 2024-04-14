@@ -1,6 +1,9 @@
 #ifndef PWM_OUTPUT_H
 #define PWM_OUTPUT_H
 
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
 /*
 PWM with variable frequency/duty using counter 0.
 Counter 0 configuration:
@@ -16,9 +19,6 @@ Usage:
  - #define PWM_ON_PERIOD to run code at the start of each period
  - !! Disabling interrupts prevent PWM from working properly !!
 */
-
-#include <avr/io.h>
-#include <avr/interrupt.h>
 
 uint8_t _pwm_prescaling = 0;
 

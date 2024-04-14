@@ -1,12 +1,12 @@
-#ifndef TX_H
-#define TX_H
+#ifndef TX_DIGITAL_H
+#define TX_DIGITAL_H
 
 void _onPeriod();
 #define PWM_ON_PERIOD _onPeriod();
 #include "pwm_output.h"
 
 /*
-PWM based transmitter.
+PWM based digital transmitter. Transmits digital data
 Protocol:
  - Send sync pulses (# defined by TX_SYNC_PULSES, min 2)
  - Send start pulse (double PWM period)
@@ -14,11 +14,7 @@ Protocol:
  - Send end pulse (double PWM period)
 
 Usage:
- - Call send(uint8_t* data, uint8_t length, uint8_t blocking) to send data
- - #define TX_RATE (default 500)
- - #define TX_DUTY_RANGE (default 100)
- - #define TX_DUTY_BIAS (default 0) to compensate for high frequency loss
- - #define TX_SYNC_PULSES (default 20)
+ - Call txSend(uint8_t* data, uint8_t length, uint8_t blocking) to send data
  - !! Disabling interrupts prevents transmission from working properly !!
 */
 

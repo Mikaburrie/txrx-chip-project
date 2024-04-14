@@ -1,6 +1,9 @@
 #ifndef MICROS_H
 #define MICROS_H
 
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
 /*
 Microsecond timer accurate to 1us using counter 0.
 Counter 0 configuration:
@@ -9,20 +12,17 @@ Counter 0 configuration:
  - overflow interrupt enabled
 
 Usage:
- - Call initMicros() to start the counter
+ - Call startMicros() to start the counter
  - Call micros() to get microseconds since starting
  - !! Disabling interrupts will stop the timer from counting properly !!
 */
-
-#include <avr/io.h>
-#include <avr/interrupt.h>
 
 uint32_t _micros = 0;
 
 // Increment _micros when timer overflows
 ISR(TIMER0_OVF_vect) { _micros += 128; }
 
-void initMicros() {
+void startMicros() {
     // set fast PWM Mode (TOP=255)
 	TCCR0A |= (1 << WGM01) | (1 << WGM00);
 
