@@ -1,8 +1,10 @@
 # Basic ATMEGA328P Radio Transmission Library
 
-This library contains code for using low cost transmitters and receivers with the ATMEGA328P. Two transmitters/receivers pairs are provided -- one digital and one analog.
+This library contains code for using low cost transmitters and receivers with the ATMEGA328P. Two transmitters/receivers pairs are provided -- one digital and one analog. These add wireless capability to the ATMEGA328P and can be used for many purposes. For example, the video below shows a robot driving wirelessly using the analog transmitter/receiver.
 
-The image below shows an example setup for a transmitter and receiver pair. The particular chips used in this image are the FS1000A (transmitter) and the MX-RM-5V (receiver). The wiring for the example is shown below.
+[Wireless robot controller]()
+
+The image below shows an example setup for a transmitter and receiver pair. The particular chips used in this image are the FS1000A (transmitter) and the MX-RM-5V (receiver). The wiring is shown below.
 
 ![transmitter/receiver setup](img/setup.jpg)
 
@@ -12,7 +14,7 @@ The image below shows an example setup for a transmitter and receiver pair. The 
 
 ## Digital Transmitter/Receiver
 
-The digital transmitter/receiver transfers up to 400 bits per second.
+The digital transmitter/receiver transfers up to 400 bits per second; is highly susceptible to noise.
 
 ### Transmitter
 
