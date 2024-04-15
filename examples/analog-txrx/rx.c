@@ -6,7 +6,7 @@
 #include <avr/io.h>
 
 #include "txrx_settings.h"
-#include "../../rx_analog.h"
+#include "../../src/rx_analog.h"
 
 int main() {
     // Receive on analog pin 0

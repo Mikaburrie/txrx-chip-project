@@ -9,7 +9,7 @@ The shell scripts tx.sh and rx.sh will compile and flash an ATMEGA328P. The scri
 
 The clip below shows a demo of the example.
 
-![analog transmitter/receiver example demo](../../../img/analog_txrx.gif)
+![analog transmitter/receiver example demo](../../img/analog_txrx.gif)
 
 The transmitter is at the top. The transmission indicator is on when transmitting.
 

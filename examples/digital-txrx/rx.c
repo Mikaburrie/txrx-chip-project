@@ -4,7 +4,7 @@
 #endif
 
 #include "txrx_settings.h"
-#include "../../rx_digital.h"
+#include "../../src/rx_digital.h"
 
 int main() {
     // Receive on analog pin 0

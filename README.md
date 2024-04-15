@@ -41,7 +41,7 @@ The receiver definitions are located at src/rx_digital.h:
 
 ### Demo
 
-An example using the digital transmitter/receiver is located in src/examples/digital-txrx. The clip below shows a demo the example.
+An example using the digital transmitter/receiver is located in examples/digital-txrx. The clip below shows a demo the example.
 
 ![digital transmitter/receiver example demo](img/digital_txrx.gif)
 
@@ -86,7 +86,7 @@ The receiver definitions are located at src/rx_analog.h:
 
 ### Demo
 
-An example using the analog transmitter/receiver is located in src/examples/analog-txrx. The clip below shows a demo the example.
+An example using the analog transmitter/receiver is located in examples/analog-txrx. The clip below shows a demo the example.
 
 ![analog transmitter/receiver example demo](img/analog_txrx.gif)
 

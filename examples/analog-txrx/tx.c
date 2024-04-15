@@ -8,7 +8,7 @@
 #include <util/delay.h>
 
 #include "txrx_settings.h"
-#include "../../tx_analog.h"
+#include "../../src/tx_analog.h"
 
 int main() {
     // Enable built in led

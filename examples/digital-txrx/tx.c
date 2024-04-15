@@ -4,7 +4,7 @@
 #endif
 
 #include "txrx_settings.h"
-#include "../../tx_digital.h"
+#include "../../src/tx_digital.h"
 
 // Create data buffer
 #define LEN 255
