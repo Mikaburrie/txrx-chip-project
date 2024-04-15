@@ -4,7 +4,7 @@ This library contains code for using low cost transmitters and receivers with th
 
 [Wireless robot controller](https://youtu.be/JEVDt-vkEO8)
 
-The image below shows an example setup for a transmitter and receiver pair. The particular chips used in this image are the FS1000A (transmitter) and the MX-RM-5V (receiver). The wiring is shown below.
+The image below shows an example setup for a transmitter and receiver pair. The particular chips in this image are the FS1000A (transmitter) and the MX-RM-5V (receiver). Quarter wave antennas are attached to the chips. These operate at 433 MHz so the antennas are 17.3 cm long. The wiring is shown below.
 
 ![transmitter/receiver setup](img/setup.jpg)
 
