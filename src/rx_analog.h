@@ -76,11 +76,11 @@ uint8_t rxRecv(uint8_t* a, uint8_t* b) {
     }
 
     // Set period and duty
-    uint16_t rateRanged = (_rx_rate < RX_HIGH_RATE ? (_rx_rate < RX_LOW_RATE ? 0 : _rx_rate) : RX_HIGH_RATE);
+    uint16_t rateRanged = (_rx_rate < RX_HIGH_RATE ? (_rx_rate < RX_LOW_RATE ? RX_LOW_RATE : _rx_rate) : RX_HIGH_RATE);
     *a = (rateRanged - RX_LOW_RATE)*255/RX_RATE_RANGE;
 
     // Set duty
-    uint8_t dutyRanged = (_rx_duty < RX_HIGH_DUTY ? (_rx_duty < RX_LOW_DUTY ? 0 : _rx_duty) : RX_HIGH_DUTY);
+    uint8_t dutyRanged = (_rx_duty < RX_HIGH_DUTY ? (_rx_duty < RX_LOW_DUTY ? RX_LOW_DUTY : _rx_duty) : RX_HIGH_DUTY);
     *b = (dutyRanged - RX_LOW_DUTY)*255/RX_DUTY_RANGE;
 
     // Return state
