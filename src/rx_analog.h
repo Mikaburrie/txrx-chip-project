@@ -91,16 +91,16 @@ void _rx_onPeriod(uint32_t period, uint8_t duty) {
     // Determine if rate is in range
     uint16_t rate = 1000000/period;
     if (rate < RX_LOW_RATE - RX_RATE_MARGIN || rate > RX_HIGH_RATE + RX_RATE_MARGIN) _rx_counter /= 2;
-    else if (_rx_counter != 255) {
+    else {
         _rx_rate = (rate + _rx_rate)/2;
-        _rx_counter++;
+        if (_rx_counter != 255) _rx_counter++;
     }
 
     // Determine if duty is in range
     if (duty < RX_LOW_DUTY - RX_DUTY_MARGIN || duty > RX_HIGH_DUTY + RX_DUTY_MARGIN) _rx_counter /= 2;
-    else if (_rx_counter != 255) {
+    else {
         _rx_duty = (duty + _rx_duty)/2;
-        _rx_counter++;
+        if (_rx_counter != 255) _rx_counter++;
     }
 
     // Set state
