@@ -2,6 +2,12 @@
 
 This library contains code for using low cost transmitters and receivers with the ATMEGA328P. Two transmitters/receivers pairs are provided -- one digital and one analog.
 
+The image below shows an example setup for a transmitter and receiver pair. The particular chips used in this image are the FS1000A (transmitter) and the MX-RM-5V (receiver). The wiring for the example is shown below.
+
+![transmitter/receiver setup](img/setup.jpg)
+
+![wiring diagram](img/wiring-diagram.png)
+
 ---
 
 ## Digital Transmitter/Receiver
