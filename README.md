@@ -16,6 +16,19 @@ The image below shows an example setup for a transmitter and receiver pair. The 
 
 The digital transmitter/receiver transfers up to 400 bits per second; is highly susceptible to noise.
 
+The protocol (shown below) consists of four sequential parts:
+
+![digital protocol](img/digital-protocol.png)
+
+###### Sync Pulses
+  - Send a series of synchronization pulses so the receiver can detect the transmission
+###### Start Transfer
+  - Send a double period pulse to signify the start of data transfer
+###### Data
+  - Send low and high duty pulses to signify zero and one bits
+###### End Transfer
+  - Send two double period pulses to signify the end of data transfer
+
 ### Transmitter
 
 The transmitter definitions are located at src/tx_digital.h:
@@ -41,7 +54,7 @@ The receiver definitions are located at src/rx_digital.h:
 
 ### Demo
 
-An example using the digital transmitter/receiver is located in examples/digital-txrx. The clip below shows a demo the example.
+An example using the digital transmitter/receiver is located in examples/digital-txrx. The clip below shows a demo of the example.
 
 ![digital transmitter/receiver example demo](img/digital_txrx.gif)
 
@@ -54,6 +67,10 @@ The receiver is on the bottom. The reception indicator is turned on after the co
 ## Analog Transmitter/Receiver
 
 The analog transmitter/receiver continuously sends two 8 bit values.
+
+The protocol (shown below) encodes data (a, b) in the rate and duty of each pulse:
+
+![analog protocol](img/analog-protocol.png)
 
 ### Transmitter
 
@@ -86,7 +103,7 @@ The receiver definitions are located at src/rx_analog.h:
 
 ### Demo
 
-An example using the analog transmitter/receiver is located in examples/analog-txrx. The clip below shows a demo the example.
+An example using the analog transmitter/receiver is located in examples/analog-txrx. The clip below shows a demo of the example.
 
 ![analog transmitter/receiver example demo](img/analog_txrx.gif)
 
