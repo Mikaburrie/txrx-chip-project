@@ -1,7 +1,13 @@
 
 # Digital Transmitter/Receiver Example
 
-An example using the digital transmitter/receiver. The clip below shows a demo of the example.
+An example using the digital transmitter/receiver.
+
+tx.c and rx.c implement the digital receiver. txrx_settings.h defines common settings for the pair.
+
+The shell scripts tx.sh and rx.sh will compile and flash an ATMEGA328P. The scripts take one argument which is the device to flash (e.g. ./tx.sh /dev/ttyACM0).
+
+The clip below shows a demo of the example.
 
 ![digital transmitter/receiver example demo](../../../img/digital_txrx.gif)
 
