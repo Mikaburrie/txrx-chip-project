@@ -19,7 +19,7 @@ Usage:
 */
 
 #ifndef TX_RATE
-#define TX_RATE 500
+#define TX_RATE 400
 #endif
 
 #ifndef TX_DUTY_RANGE
