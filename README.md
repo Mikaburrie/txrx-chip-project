@@ -1,6 +1,6 @@
 # Basic ATMEGA328P Radio Transmission Library
 
-This library contains code for using low cost transmitters and receivers with the ATMEGA328P. Two transmitters/receivers pairs are provided -- one digital and one analog. These add wireless capability to the ATMEGA328P and can be used for many purposes. For example, the video below shows a robot driving wirelessly using the analog transmitter/receiver.
+This library contains code for using low cost transmitters and receivers with the ATMEGA328P. Two transmitter/receiver pairs are provided -- one digital and one analog. These add wireless capability to the ATMEGA328P and can be used for many purposes. For example, the video below shows a robot driving wirelessly using the analog transmitter/receiver.
 
 [Wireless robot controller]()
 
