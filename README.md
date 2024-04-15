@@ -12,7 +12,7 @@ The digital transmitter/receiver can be used to transfer up to 400 bits per seco
 
 The transmitter definitions are located at src/tx_digital.h:
 
-__txSend(uint8_t* buffer, uint8_t length, uint8_t blocking)__
+`txSend(uint8_t* buffer, uint8_t length, uint8_t blocking)`
 
 - Transmits data from buffer[0] to buffer[length - 1] (or empty message if length = 0)
 - Blocks if non-zero value is passed to blocking
@@ -21,11 +21,11 @@ __txSend(uint8_t* buffer, uint8_t length, uint8_t blocking)__
 
 The receiver definitions are located at src/rx_digital.h:
 
-__rxInit(uint8_t adcPin)__
+`rxInit(uint8_t adcPin)`
 
 - Starts the receiver on the specified adc pin. (portc)
 
-__rxRecv(uint8_t** buffer, uint8_t* length)__
+`rxRecv(uint8_t** buffer, uint8_t* length)`
 
 - Checks if the receiver has any data. If yes, buffer is pointed to data[0] and length is set to the payload length
 - Returns receiver state (RX_NOISE, RX_SYNC, RX_TRANSFER, RX_COMPLETE, RX_FAILED)
@@ -33,7 +33,7 @@ __rxRecv(uint8_t** buffer, uint8_t* length)__
 
 ### Demo
 
-This clip shows a demo of the digital-txrx example located in src/examples.
+An example using the digital transmitter/receiver is located in src/examples/digital-txrx. The clip below shows a demo the example.
 
 ![digital transmitter/receiver example demo](img/digital_txrx.gif)
 
@@ -51,15 +51,15 @@ The analog transmitter/receiver can be used to continuously send two 8 bit value
 
 The transmitter definitions are located at src/tx_analog.h:
 
-__txStart()__
+`txStart()`
 
 - Starts the transmitter
 
-__txSend(uint8_t a, uint8_t b)__
+`txSend(uint8_t a, uint8_t b)`
 
 - Transmits a and b
 
-__txStop()__
+`txStop()`
 
 - Stops the transmitter
 
@@ -67,18 +67,18 @@ __txStop()__
 
 The receiver definitions are located at src/rx_analog.h:
 
-__rxInit(uint8_t adcPin)__
+`rxInit(uint8_t adcPin)`
 
 - Starts the receiver on the specified adc pin. (portc)
 
-__rxRecv(uint8_t* a, uint8_t* b)__
+`rxRecv(uint8_t* a, uint8_t* b)`
 
 - Gets current values from receiver
 - Returns receiver state (RX_NOISE, RX_SYNC)
 
 ### Demo
 
-This clip shows a demo of the analog-txrx example located in src/examples.
+An example using the analog transmitter/receiver is located in src/examples/analog-txrx. The clip below shows a demo the example.
 
 ![analog transmitter/receiver example demo](img/analog_txrx.gif)
 
