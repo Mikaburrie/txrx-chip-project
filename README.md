@@ -6,7 +6,7 @@ This library contains code for using low cost transmitters and receivers with th
 
 ## Digital Transmitter/Receiver
 
-The digital transmitter/receiver can be used to transfer up to 400 bits per second.
+The digital transmitter/receiver transfers up to 400 bits per second.
 
 ### Transmitter
 
@@ -45,7 +45,7 @@ The receiver is on the bottom. The reception indicator is turned on after the co
 
 ## Analog Transmitter/Receiver
 
-The analog transmitter/receiver can be used to continuously send two 8 bit values.
+The analog transmitter/receiver continuously sends two 8 bit values.
 
 ### Transmitter
 
