@@ -9,7 +9,7 @@ void _tx_onPeriod();
 PWM based analog transmitter. Sends two values continuously
 
 Usage:
- - Call rxSend(uint8_t a, uint8_t b) to set transmitted values
+ - Call txSend(uint8_t a, uint8_t b) to set transmitted values
  - Call txStart() to begin transmitting on pin d5
  - Call txStop() to stop transmitting
  - !! Disabling interrupts prevents transmission from working properly !!

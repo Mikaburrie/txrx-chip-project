@@ -19,7 +19,7 @@ Usage:
 */
 
 #ifndef RX_RATE
-#define RX_RATE 500
+#define RX_RATE 400
 #endif
 
 #ifndef RX_MAX_RATE_ERROR
