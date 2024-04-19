@@ -14,7 +14,7 @@ The image below shows an example setup for a transmitter and receiver pair. The 
 
 ## Digital Transmitter/Receiver
 
-The digital transmitter/receiver transfers up to 400 bits per second; is highly susceptible to noise.
+The digital transmitter/receiver transfers up to 400 bits per second, but it is highly susceptible to noise.
 
 The protocol (shown below) consists of four sequential parts:
 
