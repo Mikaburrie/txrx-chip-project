@@ -14,7 +14,7 @@ The image below shows an example setup for a transmitter and receiver pair. The 
 
 ## Digital Transmitter/Receiver
 
-The digital transmitter/receiver transfers up to 400 bits per second, but it is highly susceptible to noise.
+The digital transmitter/receiver transfers up to 400 bits per second, but it is susceptible to noise since no error correction methods are in place yet.
 
 The protocol (shown below) consists of four sequential parts:
 
@@ -60,7 +60,7 @@ An example using the digital transmitter/receiver is located in examples/digital
 
 The transmitter is at the top. The transmission indicator is on when transmitting.
 
-The receiver is on the bottom. The reception indicator is turned on after the correct message is received.
+The receiver is on the bottom. The reception indicator turns on once the correct message is received.
 
 ---
 
@@ -109,4 +109,4 @@ An example using the analog transmitter/receiver is located in examples/analog-t
 
 The transmitter is at the top. The transmission indicator is on when transmitting.
 
-The receiver is on the bottom. The reception indicator is on when a signal is detected.
+The receiver is on the bottom. The reception indicator turns on when a signal is detected.
